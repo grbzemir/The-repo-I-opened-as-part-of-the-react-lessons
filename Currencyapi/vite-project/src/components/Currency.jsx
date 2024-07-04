@@ -32,7 +32,7 @@ function Currency() {
                 width: '100%',
                 textAlign: 'center'
             }}>
-                <h3>Döviz Kuru Uygulaması</h3>
+                <h3>Döviz Kuru Uygulamasi</h3>
             </div>
             <div style={{ marginTop: '25px' }}>
                 <input
@@ -47,6 +47,7 @@ function Currency() {
                     <option>USD</option>
                     <option>EUR</option>
                     <option>TRY</option>
+                    <option>GBP</option>
                 </select>
                 <FaArrowAltCircleRight
                     style={{ marginTop: '5px', fontSize: '25px', color: 'black', marginRight: '10px' }}
@@ -57,6 +58,7 @@ function Currency() {
                     <option>TRY</option>
                     <option>USD</option>
                     <option>EUR</option>
+                    <option></option>
                 </select>
                 <input
                     value={result}
