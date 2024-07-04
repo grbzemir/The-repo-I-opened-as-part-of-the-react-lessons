@@ -5,18 +5,22 @@ import './App.css'
 import TodoCreate from './components/TodoCreate'
 import TodoList from './components/TodoList'
 
+const [todos, setTodos] = useState([]);
+
+const createTodo = (newTodo) => {
+  setTodos([...todos, newTodo])
+}
+
+
+console.log(todos);
+
+
 function App() {
 
   return (
     <div className='App'>
-      <div style={{
-        width: '500px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
-        <TodoCreate />
+      <div className='main'>
+        <TodoCreate onCreateTodo={createTodo} />
         <TodoList />
       </div>
     </div>

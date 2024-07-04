@@ -14,7 +14,7 @@ export default function TodoList() {
             padding: '10px'
         }}>
             <div>
-                Ben İlk todoyum
+                First Todo
             </div>
             <div>
                 <IoIosRemoveCircle className='todo-icons' />
