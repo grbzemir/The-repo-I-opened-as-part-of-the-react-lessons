@@ -1,0 +1,52 @@
+.App {
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+
+}
+
+.todo-create {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  /*Çerçeve yok*/
+  border-bottom: 1px solid lightgrey;
+  /*çizgi eklendi*/
+  outline: none;
+  /*removes the blue outline when clicked*/
+}
+
+.todo-create-button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: aliceblue;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.todo-icons {
+  font-size: 25px;
+  margin-right: 7px;
+
+}
