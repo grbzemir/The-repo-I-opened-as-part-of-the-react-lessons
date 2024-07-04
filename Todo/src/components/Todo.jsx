@@ -3,7 +3,11 @@ import { IoIosRemoveCircle } from "react-icons/io";
 import { FaEdit } from "react-icons/fa";
 import '../App.css'
 
-export default function TodoList() {
+export default function TodoList(todo) {
+
+    const { id, content } = todo;
+
+
     return (
         <div style={{
             display: 'flex',
@@ -11,10 +15,11 @@ export default function TodoList() {
             alignItems: 'center',
             justifyContent: 'space-between',
             border: '1px solid lightgrey',
-            padding: '10px'
+            padding: '10px',
+            marginTop: '6px'
         }}>
             <div>
-                First Todo
+                {todo.content}
             </div>
             <div>
                 <IoIosRemoveCircle className='todo-icons' />

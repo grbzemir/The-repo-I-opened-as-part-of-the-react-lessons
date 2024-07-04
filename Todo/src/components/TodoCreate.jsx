@@ -5,6 +5,10 @@ function TodoCreate({ onCreateTodo }) {
 
     const [newTodo, setNewTodo] = useState('');
 
+    const clearInput = () => {
+        setNewTodo('');
+    }
+
 
     const createTodo = () => {
 
@@ -17,6 +21,8 @@ function TodoCreate({ onCreateTodo }) {
         }
 
         onCreateTodo(request);
+        clearInput();
+
     }
     return (
         <div className='todo-create'>

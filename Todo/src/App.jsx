@@ -5,23 +5,30 @@ import './App.css'
 import TodoCreate from './components/TodoCreate'
 import TodoList from './components/TodoList'
 
-const [todos, setTodos] = useState([]);
-
-const createTodo = (newTodo) => {
-  setTodos([...todos, newTodo])
-}
-
-
-console.log(todos);
-
 
 function App() {
+
+  const [todo, setTodo] = useState([]);
+
+  const createTodo = (newTodo) => {
+    setTodo([...todo, newTodo])
+  }
+
+  const removeTodo = (todoId) => {
+
+    setTodo([...todo.filter((todo) => todo.id !== todoId)]);
+
+
+  }
+
+
+  console.log(todo);
 
   return (
     <div className='App'>
       <div className='main'>
         <TodoCreate onCreateTodo={createTodo} />
-        <TodoList />
+        <TodoList todo={todo} />
       </div>
     </div>
   )
