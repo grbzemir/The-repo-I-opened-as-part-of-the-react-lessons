@@ -3,10 +3,15 @@ import { IoIosRemoveCircle } from "react-icons/io";
 import { FaEdit } from "react-icons/fa";
 import '../App.css'
 
-export default function TodoList(todo) {
+function Todo({ todo, onRemoveTodo }) {
 
     const { id, content } = todo;
 
+    const removeToDo = () => {
+
+        onRemoveTodo(id);
+
+    }
 
     return (
         <div style={{
@@ -16,15 +21,18 @@ export default function TodoList(todo) {
             justifyContent: 'space-between',
             border: '1px solid lightgrey',
             padding: '10px',
-            marginTop: '6px'
+            marginTop: '10px'
         }}>
             <div>
                 {todo.content}
             </div>
             <div>
-                <IoIosRemoveCircle className='todo-icons' />
+                <IoIosRemoveCircle className='todo-icons' onclick={removeToDo} />
                 <FaEdit className='todo-icons' />
             </div>
         </div>
     )
 }
+
+
+export default TodoList
